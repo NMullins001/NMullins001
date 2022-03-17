@@ -8,27 +8,25 @@
     "net5.0-windows7.0": []
   },
   "packageFolders": {
-    "C:\\Users\\Noah Mullins\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackagesFallback\\": {},
-    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
+    "C:\\Users\\steve\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Noah Mullins\\source\\repos\\CarRentalUI\\CarRentalUI.csproj",
+      "projectUniqueName": "C:\\Users\\steve\\Source\\Repos\\NMullins001\\NMullins001\\CarRentalUI\\CarRentalUI.csproj",
       "projectName": "CarRentalUI",
-      "projectPath": "C:\\Users\\Noah Mullins\\source\\repos\\CarRentalUI\\CarRentalUI.csproj",
-      "packagesPath": "C:\\Users\\Noah Mullins\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Noah Mullins\\source\\repos\\CarRentalUI\\obj\\",
+      "projectPath": "C:\\Users\\steve\\Source\\Repos\\NMullins001\\NMullins001\\CarRentalUI\\CarRentalUI.csproj",
+      "packagesPath": "C:\\Users\\steve\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\steve\\Source\\Repos\\NMullins001\\NMullins001\\CarRentalUI\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackagesFallback\\",
-        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\Noah Mullins\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.Fallback.config"
+        "C:\\Users\\steve\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "net5.0-windows7.0"
@@ -62,6 +60,12 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
+        "downloadDependencies": [
+          {
+            "name": "Microsoft.NETCore.App.Host.win-x64",
+            "version": "[5.0.13, 5.0.13]"
+          }
+        ],
         "frameworkReferences": {
           "Microsoft.NETCore.App": {
             "privateAssets": "all"
@@ -70,7 +74,7 @@
             "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.406\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.101\\RuntimeIdentifierGraph.json"
       }
     }
   }
