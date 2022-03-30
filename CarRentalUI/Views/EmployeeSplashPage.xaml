@@ -1,0 +1,34 @@
+﻿<Page x:Class="CarRentalUI.Views.EmployeeSplashPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="EmployeeSplashPage">
+
+    <Grid Background="Black">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="70"/>
+            <RowDefinition Height="44*"/>
+            <RowDefinition Height="65*"/>
+
+            <RowDefinition Height="65*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="3*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <Image Source="https://i.imgur.com/5qTD4ma.png" Grid.Column="0" Grid.Row="0" HorizontalAlignment="Left"/>
+        <Label x:Name="EmployeeName" Content="EmployeeName"  VerticalContentAlignment="Center" Foreground="AliceBlue" FontSize="45" Loaded="EmployeeName_OnLoaded" HorizontalContentAlignment="Center" Grid.ColumnSpan="4"  />
+        <Button Grid.Column="1" Content="Customer Management"   Grid.Row="2" HorizontalContentAlignment="Center"  Background="DarkGoldenrod"  FontSize="25" Margin="10,10,10,10" Click="GoToRentalManagement" />
+        <Button Grid.Column="1" Content="Vehicle Management"   Grid.Row="3" HorizontalContentAlignment="Center"  Background="DarkGoldenrod"  FontSize="25" Margin="10,10,10,10" Click="GoToVehicleManagement" />
+        <ComboBox x:Name="NavigationBox" Grid.Column="3" Margin="10,10,10,11" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Foreground="Black" Text="Navigation">
+            <ComboBoxItem IsSelected="TRUE">Navigation</ComboBoxItem>
+            <ComboBoxItem Selected="SignOutNavigation">Sign Out</ComboBoxItem>
+        </ComboBox>
+
+    </Grid>
+</Page>
