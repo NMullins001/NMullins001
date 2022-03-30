@@ -1,0 +1,16 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "d21645dd-8b39-4aa5-869a-fdaa0d0e49bc": {
+      "ProjectGuid": "d21645dd-8b39-4aa5-869a-fdaa0d0e49bc",
+      "DisplayName": "CarRentalUI",
+      "ColorIndex": 0
+    },
+    "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3": {
+      "ProjectGuid": "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3",
+      "DisplayName": "Miscellaneous Files",
+      "ColorIndex": -1
+    }
+  },
+  "NextColorIndex": 1
+}

@@ -12,15 +12,16 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using CarRentalUI.Models;
 
-namespace CarRentalUI
+namespace CarRentalUI.Views
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Interaction logic for PaymentPortal.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class PaymentPortal : Page
     {
-        public MainWindow()
+        public PaymentPortal(int empId,string empName, Customer customer, RentalTransaction rentalTransaction)
         {
             InitializeComponent();
         }

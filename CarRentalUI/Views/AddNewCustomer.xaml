@@ -1,0 +1,51 @@
+﻿<Page x:Class="CarRentalUI.Views.AddNewCustomer"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:CarRentalUI.Views"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="AddNewCustomer">
+    <Grid Background="Black">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="70"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <Image Source="https://i.imgur.com/5qTD4ma.png" Grid.Column="0" Grid.Row="0" HorizontalAlignment="Left" Grid.RowSpan="1"/>
+        <Label x:Name="CustomerLabel" Content="Add A New Customer"  VerticalContentAlignment="Center" Foreground="AliceBlue" FontSize="45"  HorizontalContentAlignment="Center" Grid.ColumnSpan="3" Grid.Column="1" />
+        <ComboBox x:Name="NavigationBox" Grid.Column="4" Margin="10,10,10,11" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Foreground="Black" Text="Navigation">
+            <ComboBoxItem IsSelected="TRUE">Navigation</ComboBoxItem>
+            <ComboBoxItem Selected="GoToCustomerManagement">Customer Management</ComboBoxItem>
+            <ComboBoxItem Selected="GoToEmployeeSplashPage">Employee Management</ComboBoxItem>
+            <ComboBoxItem Selected="SignOutNavigation">Sign Out</ComboBoxItem>
+        </ComboBox>
+        <TextBox x:Name="FirstNameBox" Grid.Row="2" Grid.Column="1" BorderThickness="25" Text="First Name" TextAlignment="Center" VerticalContentAlignment="Center" BorderBrush="Black" FontSize="20" GotFocus="FirstNameBox_OnGotFocus" />
+        <TextBox x:Name="MiddleNameBox" Grid.Row="2" Grid.Column="2" BorderThickness="25" Text="Middle Name" TextAlignment="Center" VerticalContentAlignment="Center" BorderBrush="Black" FontSize="20" GotFocus="MiddleNameBox_OnGotFocus"/>
+        <TextBox x:Name="LastNameBox" Grid.Row="2" Grid.Column="3" BorderThickness="25" Text="Last Name" TextAlignment="Center" VerticalContentAlignment="Center" BorderBrush="Black" FontSize="20" GotFocus="LastNameBox_OnGotFocus"/>
+        <TextBox x:Name="PhoneNumberBox" Grid.Row="3" Grid.Column="2" BorderThickness="25" Text="PH:123-456-6789" TextAlignment="Center" VerticalContentAlignment="Center" BorderBrush="Black" FontSize="20" GotFocus="PhoneNumberBox_OnGotFocus"/>
+        <TextBox x:Name="EmailAddressBox" Grid.Row="3" Grid.Column="3" BorderThickness="25" Text="Email Address" TextAlignment="Center" VerticalContentAlignment="Center" BorderBrush="Black" FontSize="20" GotFocus="EmailAddressBox_OnGotFocus"/>
+        <TextBox x:Name="AddressBox" Grid.Row="4" Grid.Column="1" Grid.ColumnSpan="3" BorderThickness="25" Text="Address" TextAlignment="Center" VerticalContentAlignment="Center" BorderBrush="Black" FontSize="20" GotFocus="AddressBox_OnGotFocus"/>
+        <TextBox x:Name="CityBox" Grid.Row="5" Grid.Column="1" BorderThickness="25" Text="City" TextAlignment="Center" VerticalContentAlignment="Center" BorderBrush="Black" FontSize="20" GotFocus="CityBox_OnGotFocus"/>
+        <TextBox x:Name="StateBox" Grid.Row="5" Grid.Column="2" BorderThickness="25" Text="State" TextAlignment="Center" VerticalContentAlignment="Center" BorderBrush="Black" FontSize="20" GotFocus="StateBox_OnGotFocus"/>
+        <TextBox x:Name="PostalCodeBox" Grid.Row="5" Grid.Column="3" BorderThickness="25" Text="Postal Code" TextAlignment="Center" VerticalContentAlignment="Center" BorderBrush="Black" FontSize="20" GotFocus="PostalCodeBox_OnGotFocus"/>
+        <DatePicker x:Name="DatePicker" Grid.Row="3" Grid.Column="1"  VerticalContentAlignment="Center" BorderThickness="25" BorderBrush="Black" FontSize="20"/>
+
+        <Button  Grid.Row="6" Grid.Column="2" BorderThickness="25" BorderBrush="Black" Content="Sign Up" FontSize="20" Click="SignUpCustomer" Background="DarkGoldenrod"/>
+
+    </Grid>
+</Page>

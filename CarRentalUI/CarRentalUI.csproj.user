@@ -7,7 +7,99 @@
     </ApplicationDefinition>
   </ItemGroup>
   <ItemGroup>
+    <Compile Update="Views\AddNewCustomer.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\AddNewRental.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\AddNewVehicle.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\CustomerPortal.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\CustomersRentals.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\EmployeeSplashPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\ExistingCustomerLookup.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\LoginPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="MainLoginSplash.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\PaymentPortal.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\CustomerManagement.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\Vehicle Details.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\VehicleInvLookup.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\VehicleManagement.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\VehicleResults.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Update="Views\AddNewCustomer.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\AddNewRental.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\AddNewVehicle.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\CustomerPortal.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\CustomersRentals.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\EmployeeSplashPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\ExistingCustomerLookup.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\LoginPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="MainLoginSplash.xaml">
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="MainWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\PaymentPortal.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\CustomerManagement.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\Vehicle Details.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\VehicleInvLookup.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\VehicleManagement.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\VehicleResults.xaml">
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>
