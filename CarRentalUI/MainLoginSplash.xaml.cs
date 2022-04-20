@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using CarRentalUI.Models;
 using CarRentalUI.Views;
 namespace CarRentalUI
 {
@@ -20,8 +21,10 @@ namespace CarRentalUI
     /// </summary>
     public partial class MainLoginSplash : Page
     {
+       
         public MainLoginSplash()
         {
+            
             InitializeComponent();
         }
 

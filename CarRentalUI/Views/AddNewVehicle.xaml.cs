@@ -27,6 +27,8 @@ namespace CarRentalUI.Views
         private string EmpName;
         public AddNewVehicle(int empId, string empName)
         {
+            EmpId = empId;
+            EmpName = empName;
             InitializeComponent();
         }
 
@@ -58,7 +60,6 @@ namespace CarRentalUI.Views
         }
         
         private int moi;
-
         private void ModelBox_OnGotFocus(object sender, RoutedEventArgs e)
         {
             if (moi == 0)
@@ -68,7 +69,6 @@ namespace CarRentalUI.Views
             }
         }
         private int cbi;
-
         private void ColorBox_OnGotFocus(object sender, RoutedEventArgs e)
         {
             if (cbi == 0)
@@ -78,7 +78,6 @@ namespace CarRentalUI.Views
             }
         }
         private int vtb;
-
         private void VehicleTypeBox_OnGotFocus(object sender, RoutedEventArgs e)
         {
             if (vtb == 0)
@@ -88,7 +87,6 @@ namespace CarRentalUI.Views
             }
         }
         private int yni;
-
         private void YearBox_OnGotFocus(object sender, RoutedEventArgs e)
         {
             if (yni == 0)
@@ -98,7 +96,6 @@ namespace CarRentalUI.Views
             }
         }
         private int mii;
-
         private void MilesBox_OnGotFocus(object sender, RoutedEventArgs e)
         {
             if (mii == 0)
@@ -125,6 +122,7 @@ namespace CarRentalUI.Views
                 ManufacturerBox.Text = "";
                 mfi++;
             }
+
         }
 
         private decimal pdi;
@@ -176,6 +174,15 @@ namespace CarRentalUI.Views
             {
                 errorDetected++;
             }
+
+            // Check that year isn't impossible
+            int currentYear = Convert.ToInt32(DateTime.Today.Year);
+            if (Convert.ToInt32(YearBox.Text) > currentYear)
+                errorDetected++;
+
+            if (Convert.ToInt32(YearBox.Text) < 0)
+                errorDetected++;
+            /////////////////////////////////////
 
             if (errorDetected > 0)
                 MessageBox.Show("There are errors that need fixing\nNote for no middle name leave blank.");

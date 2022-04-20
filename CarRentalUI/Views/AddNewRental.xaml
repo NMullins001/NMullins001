@@ -30,7 +30,7 @@
         <Label x:Name="CustomerLabel" Content="Add Rental For Customer"  VerticalContentAlignment="Center" Foreground="AliceBlue" FontSize="45"  HorizontalContentAlignment="Center" Grid.ColumnSpan="3" Grid.Column="1" Loaded="CustomerLabel_OnLoaded" />
         <ComboBox x:Name="NavigationBox" Grid.Column="4" Margin="10,10,10,11" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Foreground="Black" Text="Navigation">
             <ComboBoxItem IsSelected="TRUE">Navigation</ComboBoxItem>
-            <ComboBoxItem Selected="CustomerPortalNavigation">Customer Management</ComboBoxItem>
+            <ComboBoxItem Selected="CustomerPortalNavigation">Current Customer Portal</ComboBoxItem>
             <ComboBoxItem Selected="NewCustomerRegistrationNavigation">New Customer</ComboBoxItem>
             <ComboBoxItem Selected="ExistingCustomerLookupNavigation">View Existing Customers</ComboBoxItem>
             <ComboBoxItem Selected="CustomerManagementNavigation">Customer Management</ComboBoxItem>
@@ -45,6 +45,7 @@
         <DatePicker x:Name="EndingDateBox" Grid.Row="4" Grid.Column="1" Grid.ColumnSpan="3"  Text="End Date"  VerticalContentAlignment="Bottom" BorderBrush="Black" FontSize="20" Margin="21,67,0,0"/>
 
         <Button  Grid.Row="6" Grid.Column="2" BorderThickness="25" BorderBrush="Black" Content="Add Rental" FontSize="20" Click="AddNewRentalForCustomer"  Background="DarkGoldenrod"/>
+        
 
     </Grid>
 </Page>

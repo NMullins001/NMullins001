@@ -64,6 +64,7 @@ namespace CarRentalUI.Views
 
         private void ViewExistingRentals(object sender, RoutedEventArgs e)
         {
+
             CustomersRentals customersRentals = new CustomersRentals(EmpId, EmpName, Customer);
             NavigationService.Navigate(customersRentals);
         }

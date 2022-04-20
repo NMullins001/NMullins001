@@ -59,3 +59,7 @@ C:\Users\steve\source\repos\NMullins001\NMullins001\CarRentalUI\obj\Debug\net5.0
 C:\Users\steve\source\repos\NMullins001\NMullins001\CarRentalUI\obj\Debug\net5.0-windows\Views\CustomerManagement.baml
 C:\Users\steve\source\repos\NMullins001\NMullins001\CarRentalUI\obj\Debug\net5.0-windows\Views\PaymentPortal.g.cs
 C:\Users\steve\source\repos\NMullins001\NMullins001\CarRentalUI\obj\Debug\net5.0-windows\Views\PaymentPortal.baml
+C:\Users\steve\source\repos\NMullins001\NMullins001\CarRentalUI\obj\Debug\net5.0-windows\Views\QuickRentCreation.g.cs
+C:\Users\steve\source\repos\NMullins001\NMullins001\CarRentalUI\obj\Debug\net5.0-windows\Views\QuickRentCustomerSelect.g.cs
+C:\Users\steve\source\repos\NMullins001\NMullins001\CarRentalUI\obj\Debug\net5.0-windows\Views\QuickRentCustomerSelect.baml
+C:\Users\steve\source\repos\NMullins001\NMullins001\CarRentalUI\obj\Debug\net5.0-windows\Views\QuickRentCreation.baml

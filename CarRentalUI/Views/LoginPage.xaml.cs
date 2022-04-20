@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net.Http.Headers;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -33,7 +34,7 @@ namespace CarRentalUI.Views
             
             string loginName = UsernameBox.Text;
             string passwordLogin = PasswordBox.Password;
-            string sqlPass = "";
+            
 
             LoginInformation loginInfo = new LoginInformation(null,-1,null);
             
@@ -69,10 +70,8 @@ namespace CarRentalUI.Views
 
                         while (reader.Read())
                         {
-                            //  string someStringFromColumnZero = reader.GetString(0);
                             LoginInformation employeeTempInformation = new LoginInformation(reader.GetString(0),
                                 Convert.ToInt32(reader.GetString(1)), reader.GetString(2));
-                            //MessageBox.Show(someStringFromColumnZero + "," + someStringFromColumnOne);
                             loginInfo = employeeTempInformation;
                         }
                     }
@@ -109,12 +108,27 @@ namespace CarRentalUI.Views
 
         private void PasswordBox_OnGotFocus(object sender, RoutedEventArgs e)
         {
-            PasswordBox.Password = "";
+            if (PasswordBox.Password == "Password")
+                PasswordBox.Password = "";
         }
 
         private void UsernameBox_OnGotFocus(object sender, RoutedEventArgs e)
         {
-            UsernameBox.Text = "";
+            if(UsernameBox.Text == "Username")
+                UsernameBox.Text = "";
         }
+        private void PasswordBox_OnLostFocus(object sender, RoutedEventArgs e)
+        {
+           if(PasswordBox.Password == "") 
+               PasswordBox.Password = "Password";
+        }
+
+        private void UsernameBox_OnLostFocus(object sender, RoutedEventArgs e)
+        {
+            if(UsernameBox.Text == "")
+                UsernameBox.Text = "Username";
+        }
+
+
     }
 }
