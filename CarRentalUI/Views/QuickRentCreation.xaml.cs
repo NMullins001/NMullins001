@@ -167,6 +167,36 @@ namespace CarRentalUI.Views
                             dbCon2.Close();
                             dbCon2.Cleaner();
 
+
+
+                            var dbCon3 = DBConnection.Instance();
+                            dbCon3.Server = "209.106.201.103";
+                            dbCon3.DatabaseName = "group1";
+                            dbCon3.UserName = "dbstudent11";
+                            dbCon3.Password = "kindsteel51";
+                            if (dbCon3.IsConnect())
+                            {
+                                
+                                query = String.Format("INSERT INTO Payment ( customerID, rentalNumber) VALUES ( '{0}', '{1}');", ImportedCustomer.CustomerId, rentalTransaction.RentalNumber);
+                                try
+                                {
+                                    var cmd = new MySqlCommand(query, DBConnection.Connection);
+                                    var reader = cmd.ExecuteNonQuery();
+
+                                }
+                                catch (Exception exception)
+                                {
+                                    string exceptionMessage;
+                                    exceptionMessage = Convert.ToString(exception);
+                                    MessageBox.Show(exceptionMessage);
+                                    throw;
+                                }
+
+                                dbCon.Close();
+                                dbCon.Cleaner();
+
+                                
+                            }
                             StopQuickRent(sender,e);
                         }
                     }

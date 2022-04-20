@@ -29,6 +29,10 @@ namespace CarRentalUI.Models
             CustomerId = customerId;
             RentalNumber = rentalNumber;
         }
+        public Payment()
+        {
+           
+        }
 
         public double RemainingBalance()
         {

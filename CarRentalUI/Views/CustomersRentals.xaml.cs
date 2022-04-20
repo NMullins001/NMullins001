@@ -205,6 +205,7 @@ namespace CarRentalUI.Views
                         var cmd = new MySqlCommand(query, DBConnection.Connection);
                         var reader = cmd.ExecuteReader();
                         RentalTransactionList.Clear();
+                        VehicleList.Clear();
                         while (reader.Read())
                         {
                             //  string someStringFromColumnZero = reader.GetString(0);
@@ -216,6 +217,18 @@ namespace CarRentalUI.Views
                             rentalTransaction.EndDate = reader.GetString(4);
                             rentalTransaction.CustomerId = reader.GetInt32(5);
                             RentalTransactionList.Add(rentalTransaction);
+
+                            Vehicle vehicle = new Vehicle();
+                            vehicle.VinNumber = reader.GetString(6);
+                            vehicle.Manufacturer = reader.GetString(7);
+                            vehicle.Model = reader.GetString(8);
+                            vehicle.Color = reader.GetString(9);
+                            vehicle.Type = reader.GetString(10);
+                            vehicle.Miles = reader.GetInt32(11);
+                            vehicle.CarYear = reader.GetString(12);
+                            vehicle.Condition = reader.GetString(13);
+                            vehicle.PricePerDay = reader.GetDouble(14);
+                            VehicleList.Add(vehicle);
                         }
                     }
                     catch (Exception exception)
@@ -229,15 +242,13 @@ namespace CarRentalUI.Views
                     dbCon.Close();
                     dbCon.Cleaner();
 
-                    CustomerPortal customerPortal = new CustomerPortal(EmpId, EmpName, Customer );
-                    NavigationService.Navigate(customerPortal);
 
                 }
 
 
 
 
-                PaymentPortal paymentPortal = new PaymentPortal(EmpId, EmpName, Customer, RentalTransactionList[0]);
+                PaymentPortal paymentPortal = new PaymentPortal(EmpId, EmpName, Customer, RentalTransactionList[0],VehicleList[0]);
                 NavigationService.Navigate(paymentPortal);
             }
         }

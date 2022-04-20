@@ -11,7 +11,7 @@ namespace CarRentalUI
     ///
     /// 1. Error checking on inputs
     /// 2. Pass employee object instead of passing empId and empName
-    /// x. Add ability for customer to be assigned rentals
+    /// x
     /// 4. Vehicle specific details page
     /// 5. Create update pages for vehicles and customers
     /// 6. 
