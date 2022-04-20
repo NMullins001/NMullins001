@@ -36,21 +36,43 @@ namespace CarRentalUI.Models
             
         }
 
-        public void AgeProcessing()
+        private void AgeProcessing()
         {
+            DateTime today = DateTime.Today;
+
             AgeNeedsProcessing =  DateTime.Parse(EndDate) - DateTime.Parse(StartDate);
-            Age = AgeNeedsProcessing.Days / 365;
+            if (AgeNeedsProcessing < TimeSpan.Zero)
+            {
+                AgeNeedsProcessing = TimeSpan.Zero;
+            }
+
+            Age = AgeNeedsProcessing.Days;
+
+            AgeNeedsProcessing = today - DateTime.Parse(StartDate);
+            if (AgeNeedsProcessing > TimeSpan.Zero)
+            {
+                Exception exception = new Exception("Date range cannot be before current date.");
+                throw exception;
+            }
+
         }
         public void FormatDates()
         {
-            string startingdate=StartDate,endingdate=EndDate,middleman;
+            string startingdate=StartDate,endingdate=EndDate;
             DateTime inputStartingDate, inputEndingDate;
+
             inputStartingDate = DateTime.Parse(startingdate);
             inputEndingDate = DateTime.Parse(endingdate);
-            middleman = inputStartingDate.ToString("yyyy-M-d");
-            StartDate = middleman;
-            middleman = inputEndingDate.ToString("yyyy-M-d");
-            EndDate = middleman;
+            StartDate = inputStartingDate.ToString("yyyy-M-d");
+            EndDate = inputEndingDate.ToString("yyyy-M-d");
+
+            AgeProcessing();
         }
+
+
+        //public override string ToString()
+        //{
+        //    return String.Format(VinNumber + );
+        //}
     }
 }

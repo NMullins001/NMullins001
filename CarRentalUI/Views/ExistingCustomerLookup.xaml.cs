@@ -51,7 +51,15 @@ namespace CarRentalUI.Views
         List<Customer> customerList = new List<Customer>();
         private void ButtonBase_OnClick(object sender, RoutedEventArgs e)
         {
-            
+            string firstName, lastName;
+            if (FirstNameBox.Text == "First Name" | FirstNameBox.Text == "")
+                firstName = "";
+            else 
+                firstName = FirstNameBox.Text;
+            if (LastNameBox.Text == "Last Name" | LastNameBox.Text == "")
+                lastName = "";
+            else
+                lastName = LastNameBox.Text;    
 
             var dbCon = DBConnection.Instance();
             dbCon.Server = "209.106.201.103";
@@ -62,7 +70,7 @@ namespace CarRentalUI.Views
             {
                 //suppose col0 and col1 are defined as VARCHAR in the DB
                 string query;
-                query = String.Format("SELECT * FROM Customers WHERE firstName like '{0}%' AND lastName like '{1}%';", FirstNameBox.Text, LastNameBox.Text );
+                query = String.Format("SELECT * FROM Customers WHERE firstName like '{0}%' AND lastName like '{1}%';", firstName, lastName );
                 customerList.Clear();
                 try
                 {
@@ -104,7 +112,7 @@ namespace CarRentalUI.Views
         }
 
         private int fni;
-        private void FirstNameBox_OnLoaded(object sender, RoutedEventArgs e)
+        private void FirstNameBox_OnGotFocus(object sender, RoutedEventArgs e)
         {
             if (fni == 0)
             {
@@ -114,7 +122,7 @@ namespace CarRentalUI.Views
         }
 
         private int lni;
-        private void LastNameBox_OnLoaded(object sender, RoutedEventArgs e)
+        private void LastNameBox_OnGotFocus(object sender, RoutedEventArgs e)
         {
             if (lni == 0)
             {

@@ -21,9 +21,34 @@ namespace CarRentalUI.Views
     /// </summary>
     public partial class PaymentPortal : Page
     {
+        private int EmpId;
+        private string EmpName;
+        private Customer Customer;
+        private RentalTransaction RentalTransaction;
         public PaymentPortal(int empId,string empName, Customer customer, RentalTransaction rentalTransaction)
         {
+            EmpId = empId;
+            EmpName = empName;
+            Customer = customer;
+            RentalTransaction = rentalTransaction;
             InitializeComponent();
+        }
+
+        private void SignOutNavigation(object sender, RoutedEventArgs e)
+        {
+            LoginPage newLoginPage = new LoginPage();
+            NavigationService.Navigate(newLoginPage);
+        }
+
+        private void GoBackToRentals(object sender, RoutedEventArgs e)
+        {
+            CustomersRentals customersRentals = new CustomersRentals(EmpId, EmpName, Customer);
+            NavigationService.Navigate(customersRentals);
+        }
+
+        private void Pay(object sender, RoutedEventArgs e)
+        {
+            throw new NotImplementedException();
         }
     }
 }

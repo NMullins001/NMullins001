@@ -3,12 +3,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Microsoft.VisualBasic;
 
 namespace CarRentalUI.Models
 {
-    class Vehicle
+    public class Vehicle
     {
-        public string VinNumber { get; set; }
+        public string VinNumber { get; set; }  
         public string Manufacturer { get; set; }
         public string Model { get; set; }
         public string Color { get; set; }
@@ -39,8 +40,11 @@ namespace CarRentalUI.Models
 
         public override string ToString()
         {
-            return String.Format(VinNumber + " " + Manufacturer + " " + Model + " " + CarYear + " " + PricePerDay +
-                                 " " + Miles + " " + Color);
+            return String.Format(CarYear + " " + Color + " " + Manufacturer + " " + Model + " Miles:" + Miles + " " +
+                                  Strings.FormatCurrency(PricePerDay));
         }
+
+      
+
     }
 }

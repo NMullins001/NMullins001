@@ -40,6 +40,12 @@
     <Compile Update="Views\CustomerManagement.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="Views\QuickRentCreation.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\QuickRentCustomerSelect.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="Views\Vehicle Details.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -88,6 +94,12 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Views\CustomerManagement.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\QuickRentCreation.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\QuickRentCustomerSelect.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Views\Vehicle Details.xaml">

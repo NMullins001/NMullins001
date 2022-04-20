@@ -224,9 +224,7 @@ namespace CarRentalUI.Views
                         }
                         catch (Exception exception)
                         {
-                            string exceptionMessage;
-                            exceptionMessage = Convert.ToString(exception);
-                            MessageBox.Show(exceptionMessage);
+                            MessageBox.Show(exception.Message);
                             throw;
                         }
                         dbCon.Close();
@@ -255,9 +253,7 @@ namespace CarRentalUI.Views
                             }
                             catch (Exception exception)
                             {
-                                string exceptionMessage;
-                                exceptionMessage = Convert.ToString(exception);
-                                MessageBox.Show(exceptionMessage);
+                                MessageBox.Show(exception.Message);
                                 throw;
                             }
 

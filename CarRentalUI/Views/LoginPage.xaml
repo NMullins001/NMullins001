@@ -5,24 +5,33 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:CarRentalUI"
       mc:Ignorable="d" 
-      d:DesignHeight="450" d:DesignWidth="800"
+      d:DesignHeight="800" d:DesignWidth="1000"
       Title="LoginPage">
 
     <Grid Background="Black">
         <Grid.RowDefinitions>
             <RowDefinition Height="70"/>
-            <RowDefinition Height="178*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height=".5*"/>
+            <RowDefinition Height=".5*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+
+
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="80"/>
-            <ColumnDefinition Width="9*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="3*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
 
-        <Image Source="https://i.imgur.com/5qTD4ma.png" Grid.Column="0" Grid.Row="0" />
-        <Label Grid.Column="1" Content="Enter Login Details Below" HorizontalAlignment="Left" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Grid.Row="1" VerticalAlignment="Top" Foreground="AliceBlue" FontSize="50" Margin="35,83,0,0"/>
-        <TextBox x:Name="UsernameBox" Grid.Column="1" HorizontalAlignment="Left" Margin="181,208,0,0" Grid.Row="1" TextWrapping="Wrap" Text="EmployeeID" VerticalAlignment="Top" Width="238" RenderTransformOrigin="0.075,0.225" Height="26" GotFocus="UsernameBox_OnGotFocus"/>
-        <PasswordBox x:Name="PasswordBox" Grid.Column="1" HorizontalAlignment="Left" Margin="181,262,0,0" Grid.Row="1" VerticalAlignment="Top" Width="238" Height="26" Password="Password" GotFocus="PasswordBox_OnGotFocus"/>
-        <Button Grid.Column="1" Content="Login" HorizontalAlignment="Left" Margin="250,309,0,0" Grid.Row="1" VerticalAlignment="Top" Width="100" Click="AttemptLogin" Background="DarkGoldenrod"/>
+        <Image Source="https://i.imgur.com/5qTD4ma.png" Grid.Column="0" Grid.Row="0" HorizontalAlignment="Left"/>
+        <Label Grid.Column="1" Grid.Row="1" Grid.ColumnSpan="3" Content="Enter Login Details Below"  HorizontalContentAlignment="Center" VerticalContentAlignment="Center"   Foreground="AliceBlue" FontSize="50" />
+        <TextBox x:Name="UsernameBox" Grid.Column="2" FontSize="25" BorderThickness="25" BorderBrush="Black" HorizontalContentAlignment="Center"  Grid.Row="2" TextWrapping="Wrap" Text="Username" VerticalAlignment="Center" GotFocus="UsernameBox_OnGotFocus" LostFocus="UsernameBox_OnLostFocus"/>
+        <PasswordBox x:Name="PasswordBox" Grid.Column="2"   Grid.Row="3" FontSize="25" BorderThickness="25" BorderBrush="Black" VerticalAlignment="Center" Height="91" Password="Password" GotFocus="PasswordBox_OnGotFocus" LostFocus="PasswordBox_OnLostFocus" HorizontalContentAlignment="Center"/>
+        <Button Grid.Column="2" Content="Login"   Grid.Row="4"   Click="AttemptLogin" Background="DarkGoldenrod" FontSize="25" Margin="0,0,0,182" BorderThickness="45" BorderBrush="Black" Grid.RowSpan="2"/>
 
     </Grid>
 </Page>

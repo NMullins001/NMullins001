@@ -148,17 +148,10 @@ namespace CarRentalUI.Views
 
         private void QuickRent(object sender, RoutedEventArgs e)
         {
-            try
-            {
-                throw new NotImplementedException("Not Implemented Yet");
-            }
-            catch (NotImplementedException exception)
-            {
-                string exceptionMessage;
-                exceptionMessage = Convert.ToString(exception);
-                MessageBox.Show(exceptionMessage);
-            }
-
+            Vehicle vehicle = new Vehicle();
+            vehicle = ListDisplay.SelectedItem as Vehicle;
+            QuickRentCustomerSelect quickRentCustomerSelect = new QuickRentCustomerSelect(EmpId, EmpName, vehicle);
+            NavigationService.Navigate(quickRentCustomerSelect);
         }
 
         List<Vehicle> vehicleList = new List<Vehicle>();
@@ -338,6 +331,15 @@ namespace CarRentalUI.Views
                 ListDisplay.Items.Add(vehicle);
             }
 
+        }
+
+        private void CopyVin(object sender, RoutedEventArgs e)
+        {
+            Vehicle vehicle = new Vehicle();
+            vehicle = ListDisplay.SelectedItem as Vehicle;
+            Clipboard.SetText(vehicle.VinNumber);
+            string message = string.Format("Copied VIN Number to Clipboard for {0} {1} {2}", vehicle.CarYear,vehicle.Model,vehicle.Manufacturer);
+            MessageBox.Show(message);
         }
     }
 }

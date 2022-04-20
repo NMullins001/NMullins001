@@ -1,0 +1,48 @@
+﻿<Page x:Class="CarRentalUI.Views.QuickRentCustomerSelect"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:CarRentalUI.Views"
+      mc:Ignorable="d" 
+      d:DesignHeight="700" d:DesignWidth="1000"
+      Title="QuickRentCustomerSelect">
+
+    <Grid Background="Black">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="70"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="3*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <Image Source="https://i.imgur.com/5qTD4ma.png" Grid.Column="0" Grid.Row="0" HorizontalAlignment="Left"/>
+        <Label x:Name="CustomerLabel" Content="Search Customers"  VerticalContentAlignment="Center" Foreground="AliceBlue" FontSize="45"  HorizontalContentAlignment="Center" Grid.ColumnSpan="4"  />
+        <ComboBox x:Name="NavigationBox" Grid.Column="2" Margin="10,10,10,11" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Foreground="Black" Text="Navigation">
+            <ComboBoxItem IsSelected="TRUE">Navigation</ComboBoxItem>
+            <ComboBoxItem Selected="StopQuickRent">Customer Management</ComboBoxItem>
+            <ComboBoxItem Selected="SignOutNavigation">Sign Out</ComboBoxItem>
+        </ComboBox>
+
+        <TextBox x:Name="FirstNameBox"  Grid.Row="2" Text="First Name" BorderThickness="25" TextAlignment="Center" VerticalContentAlignment="Center" BorderBrush="Black" FontSize="20" GotFocus="FirstNameBox_OnGotFocus"/>
+        <TextBox x:Name="LastNameBox"  Grid.Row="3" BorderThickness="25" Text="Last Name" TextAlignment="Center" VerticalContentAlignment="Center" BorderBrush="Black" FontSize="20" GotFocus="LastNameBox_OnGotFocus"/>
+        <Button Content="Search" HorizontalAlignment="Center" Grid.Row="4" VerticalAlignment="Center" Background="DarkGoldenrod" BorderThickness="25" BorderBrush="Black" FontSize="20" Click="ButtonBase_OnClick"/>
+
+
+        <Button Grid.Row="7" Grid.Column="1" Content="Select" HorizontalAlignment="Center" VerticalAlignment="Center" Background="DarkGoldenrod" BorderThickness="25" BorderBrush="Black" FontSize="20" Click="SelectCustomer_onClick"/>
+        <ListBox x:Name="ListDisplay" Grid.Column="1" Grid.Row="1" Margin="10,10,10,10" Grid.RowSpan="6" Background="Black" FontSize="25" Foreground="AliceBlue" BorderBrush="AliceBlue" BorderThickness="2"/>
+
+
+
+
+    </Grid>
+</Page>

@@ -24,21 +24,21 @@
             <ColumnDefinition Width="*"/>
             <ColumnDefinition Width="*"/>
             <ColumnDefinition Width="*"/>
-
+<ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
 
         <Image Source="https://i.imgur.com/5qTD4ma.png" Grid.Column="0" Grid.Row="0" HorizontalAlignment="Left"/>
-        <Label x:Name="CustomerLabel" Content="Search Vehicle Inventory"  VerticalContentAlignment="Center" Foreground="AliceBlue" FontSize="35"  HorizontalContentAlignment="Center" Grid.ColumnSpan="4"  />
-        <ComboBox x:Name="NavigationBox" Grid.Column="3" Margin="10,10,10,11" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Foreground="Black" Text="Navigation">
+        <Label x:Name="CustomerLabel" Content="Search Vehicle Inventory"  VerticalContentAlignment="Center" Foreground="AliceBlue" FontSize="35"  HorizontalContentAlignment="Center" Grid.ColumnSpan="5"  />
+        <ComboBox x:Name="NavigationBox" Grid.Column="3" Grid.ColumnSpan="2" Margin="10,10,10,11" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" HorizontalAlignment="Right" Foreground="Black" Text="Navigation" Width="140">
             <ComboBoxItem IsSelected="TRUE">Navigation</ComboBoxItem>
             <ComboBoxItem Selected="VehicleMangementNavigation">Vehicle Management</ComboBoxItem>
             <ComboBoxItem Selected="EmployeePortalNavigation">Customer Management</ComboBoxItem>
             <ComboBoxItem Selected="SignOut">Sign Out</ComboBoxItem>
         </ComboBox>
-        <ListBox x:Name="ListDisplay" Grid.Column="2" Grid.Row="1" Grid.ColumnSpan="2" Margin="10,10,10,10" Grid.RowSpan="6" Background="Black" FontSize="25" Foreground="AliceBlue" BorderBrush="AliceBlue" BorderThickness="2"/>
-        <Button Grid.Row="7" Grid.Column="3" Content="View Details" HorizontalAlignment="Center" VerticalAlignment="Center" Background="DarkGoldenrod" BorderThickness="25" BorderBrush="Black" FontSize="20" Click="ViewVehicleDetails"/>
-        <Button Grid.Row="7" Grid.Column="2" Content="Quick Rent" HorizontalAlignment="Center" VerticalAlignment="Center" Background="DarkGoldenrod" BorderThickness="25" BorderBrush="Black" FontSize="20" Click="QuickRent"/>
-
+        <ListBox x:Name="ListDisplay" Grid.Column="2" Grid.Row="1" Grid.ColumnSpan="3" Margin="10,10,10,10" Grid.RowSpan="6" Background="Black" FontSize="25" Foreground="AliceBlue" BorderBrush="AliceBlue" BorderThickness="2"/>
+        <Button Grid.Row="7" Grid.Column="4" Content="View Details" HorizontalAlignment="Center" VerticalAlignment="Center" Background="DarkGoldenrod" BorderThickness="25" BorderBrush="Black" FontSize="20" Click="ViewVehicleDetails"/>
+        <Button Grid.Row="7" Grid.Column="3" Content="Quick Rent" HorizontalAlignment="Center" VerticalAlignment="Center" Background="DarkGoldenrod" BorderThickness="25" BorderBrush="Black" FontSize="20" Click="QuickRent"/>
+        <Button Grid.Row="7" Grid.Column="2" Content="Copy Vin " HorizontalAlignment="Center" VerticalAlignment="Center" Background="DarkGoldenrod" BorderThickness="25" BorderBrush="Black" FontSize="20" Click="CopyVin"/>
 
         <TextBox x:Name="VinNumberBox"  Grid.Row="1" Text="VIN Number" BorderThickness="25" TextAlignment="Center" VerticalContentAlignment="Center" BorderBrush="Black" FontSize="20" GotFocus="VinNumberBox_OnFocus"/>
         <TextBox x:Name="ManufacturerBox"  Grid.Row="2" Text="Manufacturer" BorderThickness="25" TextAlignment="Center" VerticalContentAlignment="Center" BorderBrush="Black" FontSize="20" GotFocus="ManufacturerBox_OnGotFocus"/>
@@ -65,7 +65,7 @@
             <ComboBoxItem Name="NotAvailable">Not Available</ComboBoxItem>
         </ComboBox>
 
-        <Button Grid.Row="7" Grid.Column="0" Grid.ColumnSpan="2" Content="Search" HorizontalAlignment="Center" VerticalAlignment="Center" Background="DarkGoldenrod" BorderThickness="25" BorderBrush="Black" FontSize="20" Click="SearchVehicle"/>
+        <Button Grid.Row="7" Grid.Column="0" Grid.ColumnSpan="2" Content="Search" HorizontalAlignment="Center" VerticalAlignment="Center" Background="DarkGoldenrod" BorderThickness="25" BorderBrush="Black" FontSize="20" Click="SearchVehicle" MinWidth="300"/>
 
 
 

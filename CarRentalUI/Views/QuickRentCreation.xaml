@@ -1,0 +1,47 @@
+﻿<Page x:Class="CarRentalUI.Views.QuickRentCreation"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:CarRentalUI.Views"
+      mc:Ignorable="d" 
+      d:DesignHeight="840" d:DesignWidth="1200"
+      Title="QuickRentCreation">
+
+    <Grid Background="Black">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="70"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Image Source="https://i.imgur.com/5qTD4ma.png" Grid.Column="0" Grid.Row="0" HorizontalAlignment="Left" Grid.RowSpan="1"/>
+        <Label x:Name="CustomerLabel" Content="Add Rental For Customer"  VerticalContentAlignment="Center" Foreground="AliceBlue" FontSize="45"  HorizontalContentAlignment="Center" Grid.ColumnSpan="3" Grid.Column="1"/>
+        <ComboBox x:Name="NavigationBox" Grid.Column="4" Margin="10,10,10,11" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Foreground="Black" Text="Navigation">
+            <ComboBoxItem IsSelected="TRUE">Navigation</ComboBoxItem>
+            <ComboBoxItem Selected="StopQuickRent">Sign Out</ComboBoxItem>
+            <ComboBoxItem Selected="SignOutNavigation">Sign Out</ComboBoxItem>
+        </ComboBox>
+
+        <Label Grid.Row="3" Grid.Column="1" Grid.ColumnSpan="3" VerticalContentAlignment="Top" Foreground="AliceBlue" Content="Start Date" HorizontalContentAlignment="Center" FontSize="30" Margin="0,17,0,37"/>
+        <Label Grid.Row="4" Grid.Column="1" Grid.ColumnSpan="3" VerticalContentAlignment="Top" Foreground="AliceBlue" Content="End Date" HorizontalContentAlignment="Center" FontSize="30" Margin="0,17,0,37"/>
+        <Label x:Name="VinNumberLabel" Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="3" BorderThickness="25" Foreground="AliceBlue" HorizontalAlignment="Center" Content="Vin"  VerticalContentAlignment="Center" BorderBrush="Black" FontSize="30" Loaded="VinNumberBox_OnLoaded" />
+        <DatePicker x:Name="StartingDateBox" Grid.Row="3" Grid.Column="1" Grid.ColumnSpan="3"  Text="Start Date"  VerticalContentAlignment="Bottom" BorderBrush="Black" FontSize="20"  Margin="21,72,0,104" Grid.RowSpan="2"/>
+        <DatePicker x:Name="EndingDateBox" Grid.Row="4" Grid.Column="1" Grid.ColumnSpan="3"  Text="End Date"  VerticalContentAlignment="Bottom" BorderBrush="Black" FontSize="20" Margin="21,67,0,0"/>
+
+        <Button  Grid.Row="6" Grid.Column="2" BorderThickness="25" BorderBrush="Black" Content="Add Rental" FontSize="20" Click="AddNewRentalForCustomer"  Background="DarkGoldenrod"/>
+
+
+    </Grid>
+</Page>
